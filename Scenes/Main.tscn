@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bum6ex1ioa6qp"]
+
+[ext_resource type="PackedScene" uid="uid://cm7y7yjs7sy3a" path="res://Scenes/Levels/StartMenu.tscn" id="1_r150o"]
+
+[node name="Main" type="Node" unique_id=91055406]
+
+[node name="Level" type="Node" parent="." unique_id=1789748068]
+
+[node name="StartMenu" parent="Level" unique_id=1990518574 instance=ExtResource("1_r150o")]
+
+[node name="Entities" type="Node" parent="." unique_id=1742377910]
+
+[node name="Node" type="Node" parent="Entities" unique_id=279422803]
