@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://cm7y7yjs7sy3a" path="res://Scenes/Levels/StartMenu.tscn" id="1_r150o"]
 [ext_resource type="PackedScene" uid="uid://dkqg1dfl6ybdm" path="res://Scenes/Player/Player.tscn" id="2_idj7w"]
-[ext_resource type="PackedScene" uid="uid://bqqvk0r51d37f" path="res://Scenes/Misc/PlayerSpawn.tscn" id="3_kln2b"]
 
 [node name="Main" type="Node" unique_id=91055406]
 
@@ -15,8 +14,6 @@
 [node name="Player" type="Node" parent="Entities" unique_id=279422803]
 
 [node name="Player" parent="Entities/Player" unique_id=1485838003 instance=ExtResource("2_idj7w")]
-
-[node name="PlayerSpawn" parent="Entities/Player" unique_id=1561182384 instance=ExtResource("3_kln2b")]
-position = Vector2(918, 452)
+position = Vector2(-986, 23)
 
 [node name="Enemies" type="Node" parent="Entities" unique_id=303019892]
