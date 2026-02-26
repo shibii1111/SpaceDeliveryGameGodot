@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bum6ex1ioa6qp"]
 
 [ext_resource type="PackedScene" uid="uid://cm7y7yjs7sy3a" path="res://Scenes/Levels/StartMenu.tscn" id="1_r150o"]
-[ext_resource type="Texture2D" uid="uid://cyt2uu0wg42vd" path="res://Assets/Player/IMG_5090.jpeg" id="2_idj7w"]
 
 [node name="Main" type="Node" unique_id=91055406]
 
@@ -12,7 +11,3 @@
 [node name="Entities" type="Node" parent="." unique_id=1742377910]
 
 [node name="Node" type="Node" parent="Entities" unique_id=279422803]
-
-[node name="Img5090" type="Sprite2D" parent="." unique_id=1835810731]
-position = Vector2(351, 206)
-texture = ExtResource("2_idj7w")
