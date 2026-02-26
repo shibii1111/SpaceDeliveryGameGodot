@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bqqvk0r51d37f"]
+
+[ext_resource type="Script" uid="uid://y042f535hy51" path="res://Scripts/Scenes/Spawn.gd" id="1_5x0id"]
+[ext_resource type="Texture2D" uid="uid://coiicslsdu6" path="res://icon.svg" id="2_46vhw"]
+
+[node name="PlayerSpawn" type="Node2D" unique_id=770817307 groups=["SpawnPoints"]]
+
+[node name="Spawn" type="Marker2D" parent="." unique_id=663883120]
+position = Vector2(0, 4)
+script = ExtResource("1_5x0id")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=627137912]
+modulate = Color(0, 1, 1, 0.2)
+texture = ExtResource("2_46vhw")

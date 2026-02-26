@@ -3,6 +3,7 @@
 [node name="StartMenu" type="Node" unique_id=1990518574]
 
 [node name="Control" type="Control" parent="." unique_id=1349054236]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
