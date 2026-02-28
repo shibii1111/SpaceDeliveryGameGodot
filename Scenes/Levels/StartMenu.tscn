@@ -1,34 +1,252 @@
 [gd_scene format=3 uid="uid://cm7y7yjs7sy3a"]
 
 [ext_resource type="PackedScene" uid="uid://bqqvk0r51d37f" path="res://Scenes/Misc/PlayerSpawn.tscn" id="1_aoyix"]
+[ext_resource type="Script" uid="uid://b2w23eyjk4ewd" path="res://Scripts/Scenes/StartMenu.gd" id="1_sbd8g"]
+[ext_resource type="Texture2D" uid="uid://dqvall48qliyk" path="res://Assets/UI/Kenney/kenney_ui-pack-space-expansion/PNG/Extra/Default/panel_glass.png" id="2_sbd8g"]
+[ext_resource type="Texture2D" uid="uid://c0a2mo6jo8o4o" path="res://Assets/UI/Kenney/kenney_ui-pack-space-expansion/PNG/Extra/Default/panel_square.png" id="3_swxrv"]
 
-[node name="StartMenu" type="Node" unique_id=1990518574]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gawjd"]
+load_path = "res://.godot/imported/panel_glass.svg-21a1fe5bedf3331ad5405aa7a21e1df4.ctex"
 
-[node name="Control" type="Control" parent="." unique_id=1349054236]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_swxrv"]
+texture = SubResource("CompressedTexture2D_gawjd")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 64, 64)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jejci"]
+load_path = "res://.godot/imported/panel_glass.svg-21a1fe5bedf3331ad5405aa7a21e1df4.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sbd8g"]
+texture = SubResource("CompressedTexture2D_jejci")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 64, 64)
+modulate_color = Color(0.16045877, 0.13855183, 0.015254909, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jejci"]
+texture = SubResource("CompressedTexture2D_gawjd")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 64, 64)
+modulate_color = Color(0.9615508, 0.8895491, 0.50122756, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ue4yn"]
+load_path = "res://.godot/imported/panel_square.svg-1ef00713fc3a240bb633b4a988f37ec9.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sbd8g"]
+load_path = "res://.godot/imported/panel_glass.svg-21a1fe5bedf3331ad5405aa7a21e1df4.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gawjd"]
+texture = SubResource("CompressedTexture2D_sbd8g")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 64, 64)
+modulate_color = Color(0.16045877, 0.13855183, 0.015254909, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fbfx5"]
+load_path = "res://.godot/imported/panel_glass.svg-21a1fe5bedf3331ad5405aa7a21e1df4.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ue4yn"]
+texture = SubResource("CompressedTexture2D_fbfx5")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 64, 64)
+modulate_color = Color(0.9615508, 0.8895491, 0.50122756, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_86qgu"]
+load_path = "res://.godot/imported/panel_glass.svg-21a1fe5bedf3331ad5405aa7a21e1df4.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n10a8"]
+texture = SubResource("CompressedTexture2D_86qgu")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 64, 64)
+modulate_color = Color(0.16045877, 0.13855183, 0.015254909, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eloe5"]
+load_path = "res://.godot/imported/panel_glass.svg-21a1fe5bedf3331ad5405aa7a21e1df4.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0x8jj"]
+texture = SubResource("CompressedTexture2D_eloe5")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 64, 64)
+modulate_color = Color(0.9615508, 0.8895491, 0.50122756, 1)
+
+[node name="StartMenu" type="Control" unique_id=1064412734 node_paths=PackedStringArray("start_button")]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sbd8g")
+initial_scene = &"uid://dnipmsix7afa8"
+start_button = NodePath("NinePatchRect/NinePatchRect2/VBoxContainer/StartButton")
 
-[node name="Button" type="Button" parent="Control" unique_id=169224673]
-layout_mode = 0
-offset_left = 852.0
-offset_top = 659.0
-offset_right = 952.0
-offset_bottom = 692.0
-text = "Start"
-
-[node name="Panel" type="Panel" parent="Control" unique_id=1324530168]
+[node name="TextureRect" type="ColorRect" parent="." unique_id=1629470745]
+texture_filter = 3
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 853.0
-offset_top = 457.0
-offset_right = 853.0
-offset_bottom = 457.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.0627451, 0.08627451, 0.21960784, 1)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1257274046]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -704.0
+offset_top = -284.0
+offset_right = 704.0
+offset_bottom = 292.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sbd8g")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="NinePatchRect" unique_id=177385519]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = -64.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_swxrv")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/NinePatchRect2" unique_id=1004046682]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -40.5
+offset_right = 65.0
+offset_bottom = 40.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="StartButton" type="Button" parent="NinePatchRect/NinePatchRect2/VBoxContainer" unique_id=169224673]
+z_index = 1
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.8745098, 0.8745098, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_swxrv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sbd8g")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jejci")
+text = "Start"
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/NinePatchRect2/VBoxContainer/StartButton" unique_id=1633079989]
+modulate = Color(0.30435303, 0.3515764, 0.3283409, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.5
+offset_top = 3.5
+offset_right = 4.5
+offset_bottom = 4.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_ue4yn")
+metadata/_edit_lock_ = true
+
+[node name="OptionsButton" type="Button" parent="NinePatchRect/NinePatchRect2/VBoxContainer" unique_id=477157896]
+z_index = 1
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.8745098, 0.8745098, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_swxrv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gawjd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ue4yn")
+text = "Options"
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/NinePatchRect2/VBoxContainer/OptionsButton" unique_id=2126939946]
+modulate = Color(0.30435303, 0.3515764, 0.3283409, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.5
+offset_top = 3.5
+offset_right = 4.5
+offset_bottom = 4.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_ue4yn")
+metadata/_edit_lock_ = true
+
+[node name="ExitButton" type="Button" parent="NinePatchRect/NinePatchRect2/VBoxContainer" unique_id=1907951917]
+z_index = 1
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.8745098, 0.8745098, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_swxrv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_n10a8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0x8jj")
+text = "Exit"
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/NinePatchRect2/VBoxContainer/ExitButton" unique_id=905669606]
+modulate = Color(0.30435303, 0.3515764, 0.3283409, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.5
+offset_top = 3.5
+offset_right = 4.5
+offset_bottom = 4.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_ue4yn")
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=648462669]
 
 [node name="PlayerSpawn" parent="." unique_id=770817307 instance=ExtResource("1_aoyix")]
-position = Vector2(208, 929)
+position = Vector2(-832, 592)
+
+[connection signal="pressed" from="NinePatchRect/NinePatchRect2/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/NinePatchRect2/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

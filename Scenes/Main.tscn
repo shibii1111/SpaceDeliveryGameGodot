@@ -5,7 +5,7 @@
 
 [node name="Main" type="Node" unique_id=91055406]
 
-[node name="Level" type="Node" parent="." unique_id=1789748068]
+[node name="Level" type="Node" parent="." unique_id=1789748068 groups=["LevelContainer"]]
 
 [node name="StartMenu" parent="Level" unique_id=1990518574 instance=ExtResource("1_r150o")]
 

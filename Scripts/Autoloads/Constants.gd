@@ -6,3 +6,4 @@
 extends Node
 
 const PLAYER_SCENE: PackedScene = preload("uid://dkqg1dfl6ybdm")
+const LOADING_SCREEN_SCENE: PackedScene = preload("uid://cqx25emxcu721")
