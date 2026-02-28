@@ -43,6 +43,7 @@ Player=""
 Enemies=""
 SpawnPoints=""
 LevelContainer=""
+Camera=""
 
 [input]
 

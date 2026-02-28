@@ -69,6 +69,7 @@ func _swap_into_level_container_and_return(packed: PackedScene) -> Node:
 func _refresh_player_spawn() -> void:
 	var player := get_tree().get_first_node_in_group("Player") as Node2D
 	var spawn := get_tree().get_first_node_in_group("SpawnPoints") as Node2D
+	var camera := get_tree().get_first_node_in_group("Camera") as Node2D
 	
 	if player == null:
 		push_warning("No player found in group 'Player'")
@@ -78,3 +79,4 @@ func _refresh_player_spawn() -> void:
 		return
 		
 	player.global_position = spawn.global_position
+	camera.set_enabled(true)
