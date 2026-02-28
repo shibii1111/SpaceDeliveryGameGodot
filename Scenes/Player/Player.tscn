@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://dkqg1dfl6ybdm"]
 
 [ext_resource type="Script" uid="uid://qi7rw0uf7gma" path="res://Scripts/Player/PlayerMovement.gd" id="1_s0eop"]
-[ext_resource type="Texture2D" uid="uid://t2jpn6k23p1y" path="res://Assets/Player/Untitled_Artwork.png" id="2_ft8w5"]
+[ext_resource type="Texture2D" uid="uid://t2jpn6k23p1y" path="res://Assets/Player/Spaceship_01.png" id="2_ft8w5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l3ax4"]
 radius = 76.79192
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft8w5"]
+atlas = ExtResource("2_ft8w5")
+region = Rect2(498, 132, 1741, 1075)
 
 [node name="Player" type="Node2D" unique_id=1106971481 groups=["Player"]]
 
@@ -15,10 +19,11 @@ script = ExtResource("1_s0eop")
 shape = SubResource("CircleShape2D_l3ax4")
 
 [node name="Sprite2D" type="Sprite2D" parent="Body" unique_id=535271970]
+modulate = Color(0, 1, 0.58333325, 1)
 texture_filter = 6
 rotation = 1.5707964
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_ft8w5")
+texture = SubResource("AtlasTexture_ft8w5")
 
 [node name="Camera" type="Camera2D" parent="Body" unique_id=1516218065 groups=["Camera"]]
 enabled = false
