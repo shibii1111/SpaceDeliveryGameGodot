@@ -23,3 +23,8 @@ modulate = Color(0, 0, 0, 1)
 position = Vector2(95, -1.0000076)
 scale = Vector2(0.65, 0.65)
 texture = ExtResource("2_ft8w5")
+
+[node name="Camera" type="Camera2D" parent="Body" unique_id=1516218065 groups=["Camera"]]
+enabled = false
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
