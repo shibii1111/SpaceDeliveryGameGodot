@@ -14,6 +14,6 @@ func _on_progress_changed(percent: float) -> void:
 	percent_text.text = "loading... " + str(int(percent)) + "%"
 		
 func _on_load_finished() -> void:
-	animation_player.play_backwards("transition")
+	animation_player.play("FadeOut")
 	await animation_player.animation_finished
 	queue_free()
