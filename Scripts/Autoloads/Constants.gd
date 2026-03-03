@@ -5,5 +5,10 @@
 
 extends Node
 
-const PLAYER_SCENE: PackedScene = preload("uid://dkqg1dfl6ybdm")
-const LOADING_SCREEN_SCENE: PackedScene = preload("uid://cqx25emxcu721")
+class Scenes:
+	const PLAYER: PackedScene = preload("uid://dkqg1dfl6ybdm")
+	const LOADING_SCREEN: PackedScene = preload("uid://cqx25emxcu721")
+
+class Projectiles:
+	const NORMAL: PackedScene = preload("uid://b4v1cem220w0t")
+	const HOMING: PackedScene = preload("uid://bvu5cyn5o3noa")

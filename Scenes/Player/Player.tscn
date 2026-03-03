@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dkqg1dfl6ybdm"]
 
+[ext_resource type="Script" uid="uid://y66j4vtvd7k8" path="res://Scripts/Player/Player.gd" id="1_h54ih"]
 [ext_resource type="Script" uid="uid://qi7rw0uf7gma" path="res://Scripts/Player/PlayerMovement.gd" id="1_s0eop"]
 [ext_resource type="Texture2D" uid="uid://t2jpn6k23p1y" path="res://Assets/Player/Spaceship_01.png" id="2_ft8w5"]
+[ext_resource type="PackedScene" uid="uid://b4v1cem220w0t" path="res://Scenes/Projectiles/NormalProjectile.tscn" id="2_ude3g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l3ax4"]
 radius = 76.79192
@@ -11,6 +13,8 @@ atlas = ExtResource("2_ft8w5")
 region = Rect2(498, 132, 1741, 1075)
 
 [node name="Player" type="Node2D" unique_id=1106971481 groups=["Player"]]
+script = ExtResource("1_h54ih")
+projectile_scene = ExtResource("2_ude3g")
 
 [node name="Body" type="CharacterBody2D" parent="." unique_id=1419245002]
 script = ExtResource("1_s0eop")
@@ -19,7 +23,6 @@ script = ExtResource("1_s0eop")
 shape = SubResource("CircleShape2D_l3ax4")
 
 [node name="Sprite2D" type="Sprite2D" parent="Body" unique_id=535271970]
-modulate = Color(0, 1, 0.58333325, 1)
 texture_filter = 6
 rotation = 1.5707964
 scale = Vector2(0.1, 0.1)
@@ -29,3 +32,6 @@ texture = SubResource("AtlasTexture_ft8w5")
 enabled = false
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[node name="Muzzle" type="Marker2D" parent="Body" unique_id=493561533]
+position = Vector2(62, 0)

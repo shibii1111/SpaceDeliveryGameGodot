@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://crf2q73y5foir"]
+
+[ext_resource type="Script" uid="uid://c0xiwxe3pj7s1" path="res://Scripts/Scenes/ProjectileBase.gd" id="1_osinf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2fg3n"]
+radius = 13.0
+
+[node name="Projectile" type="Area2D" unique_id=1000716616]
+script = ExtResource("1_osinf")
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1731878589]
+shape = SubResource("CircleShape2D_2fg3n")
+
+[node name="ProjectileSprite" type="Sprite2D" parent="." unique_id=1881739939]
+
+[node name="Behaviors" type="Node" parent="." unique_id=1160269927]
