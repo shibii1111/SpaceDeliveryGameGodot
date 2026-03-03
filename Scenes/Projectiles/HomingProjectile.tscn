@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bvu5cyn5o3noa"]
+
+[ext_resource type="PackedScene" uid="uid://crf2q73y5foir" path="res://Scenes/Projectiles/BaseProjectile.tscn" id="1_ahge7"]
+[ext_resource type="Resource" uid="uid://cn8lhbt1n2fah" path="res://Resources/Projectiles/HomingProjectileStats.tres" id="2_lridx"]
+[ext_resource type="Script" uid="uid://due5cqwbjf7y3" path="res://Scripts/Projectiles/HomingProjectileBehavior.gd" id="3_up63v"]
+
+[node name="Projectile" unique_id=1000716616 instance=ExtResource("1_ahge7")]
+stats = ExtResource("2_lridx")
+
+[node name="HomingProjectileBehavior" type="Node" parent="Behaviors" parent_id_path=PackedInt32Array(1160269927) index="0" unique_id=691653523]
+script = ExtResource("3_up63v")

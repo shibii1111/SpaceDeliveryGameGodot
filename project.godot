@@ -21,6 +21,7 @@ SceneManager="*uid://7k86ax8oavlc"
 Inputs="*uid://cn5v6gkrmrwlb"
 DevGlobalUtils="*uid://uqyeu0ch31gq"
 Constants="*uid://6260p3gf852q"
+ProjectilePool="*uid://d4nbdkfyervir"
 
 [display]
 

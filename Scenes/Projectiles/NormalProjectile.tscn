@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b4v1cem220w0t"]
+
+[ext_resource type="PackedScene" uid="uid://crf2q73y5foir" path="res://Scenes/Projectiles/BaseProjectile.tscn" id="1_vfl3b"]
+[ext_resource type="Resource" uid="uid://dm1u47hgyd10x" path="res://Resources/Projectiles/NormalProjectileStats.tres" id="2_h83yp"]
+[ext_resource type="Texture2D" uid="uid://cl5ngwn05hmfh" path="res://Assets/UI/Kenney/kenney_ui-pack-space-expansion/PNG/Yellow/Default/bar_round_gloss_large_square.png" id="3_d8das"]
+[ext_resource type="Script" uid="uid://dd8em23w7td1s" path="res://Scripts/Projectiles/NormalProjectileBehavior.gd" id="3_t6cpr"]
+
+[node name="Projectile" unique_id=1000716616 instance=ExtResource("1_vfl3b")]
+stats = ExtResource("2_h83yp")
+
+[node name="ProjectileSprite" parent="." index="1" unique_id=1881739939]
+modulate = Color(0.9224373, 0.3008908, 0.42872268, 1)
+texture_filter = 3
+texture = ExtResource("3_d8das")
+
+[node name="NormalProjectileBehavior" type="Node" parent="Behaviors" parent_id_path=PackedInt32Array(1160269927) index="0" unique_id=539483054]
+script = ExtResource("3_t6cpr")

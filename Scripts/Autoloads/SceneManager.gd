@@ -3,7 +3,7 @@ extends Node
 signal progress_changed(progress: float)
 signal load_finished
 
-var loading_screen: PackedScene = Constants.LOADING_SCREEN_SCENE
+var loading_screen: PackedScene = Constants.Scenes.LOADING_SCREEN
 var loaded_resource: PackedScene
 var scene_path: String
 var progress: Array = []
