@@ -5,16 +5,25 @@ extends Node2D
 @export var max_activate_projectiles: int = 5
 
 @onready var muzzle: Marker2D = $Body/Muzzle
+@onready var body: CharacterBody2D = $Body
 
 var _cooldown_left: float = 0.0
 var _activate_projectiles: int = 0
 
+var external_fire_pressed: bool = false
+var use_external_input: bool = false
+
 func _process(delta: float) -> void:
 	_cooldown_left = maxf(0.0, _cooldown_left - delta)
 	
-	if Input.is_action_pressed("fire"):
+	if _is_fire_pressed():
 		_try_shoot()
+	
+func _is_fire_pressed() -> bool:
+	if use_external_input:
+		return external_fire_pressed	
 		
+	return Input.is_action_pressed("fire")
 	
 func _try_shoot() -> void:
 	if _cooldown_left > 0.0:
