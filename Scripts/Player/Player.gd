@@ -40,7 +40,7 @@ func _shoot() -> void:
 		push_error("Player: projectile_scene is not assigned.")
 		return
 		
-	var projectile := ProjectilePool.take_projectile(projectile_scene)
+	var projectile = ProjectilePool.take_projectile(projectile_scene)
 	get_tree().current_scene.add_child(projectile)
 	_activate_projectiles += 1
 	

@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://c0a2mo6jo8o4o" path="res://Assets/UI/Kenney/kenney_ui-pack-space-expansion/PNG/Extra/Default/panel_square.png" id="3_swxrv"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gawjd"]
-load_path = "res://.godot/imported/panel_glass.svg-21a1fe5bedf3331ad5405aa7a21e1df4.ctex"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_swxrv"]
 texture = SubResource("CompressedTexture2D_gawjd")
@@ -17,7 +16,6 @@ texture_margin_bottom = 6.0
 region_rect = Rect2(0, 0, 64, 64)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jejci"]
-load_path = "res://.godot/imported/panel_glass.svg-21a1fe5bedf3331ad5405aa7a21e1df4.ctex"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sbd8g"]
 texture = SubResource("CompressedTexture2D_jejci")
@@ -37,11 +35,7 @@ texture_margin_bottom = 6.0
 region_rect = Rect2(0, 0, 64, 64)
 modulate_color = Color(0.9615508, 0.8895491, 0.50122756, 1)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ue4yn"]
-load_path = "res://.godot/imported/panel_square.svg-1ef00713fc3a240bb633b4a988f37ec9.ctex"
-
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sbd8g"]
-load_path = "res://.godot/imported/panel_glass.svg-21a1fe5bedf3331ad5405aa7a21e1df4.ctex"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gawjd"]
 texture = SubResource("CompressedTexture2D_sbd8g")
@@ -53,7 +47,6 @@ region_rect = Rect2(0, 0, 64, 64)
 modulate_color = Color(0.16045877, 0.13855183, 0.015254909, 1)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fbfx5"]
-load_path = "res://.godot/imported/panel_glass.svg-21a1fe5bedf3331ad5405aa7a21e1df4.ctex"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ue4yn"]
 texture = SubResource("CompressedTexture2D_fbfx5")
@@ -65,7 +58,6 @@ region_rect = Rect2(0, 0, 64, 64)
 modulate_color = Color(0.9615508, 0.8895491, 0.50122756, 1)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_86qgu"]
-load_path = "res://.godot/imported/panel_glass.svg-21a1fe5bedf3331ad5405aa7a21e1df4.ctex"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n10a8"]
 texture = SubResource("CompressedTexture2D_86qgu")
@@ -77,7 +69,6 @@ region_rect = Rect2(0, 0, 64, 64)
 modulate_color = Color(0.16045877, 0.13855183, 0.015254909, 1)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eloe5"]
-load_path = "res://.godot/imported/panel_glass.svg-21a1fe5bedf3331ad5405aa7a21e1df4.ctex"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0x8jj"]
 texture = SubResource("CompressedTexture2D_eloe5")
@@ -186,7 +177,7 @@ offset_right = 4.5
 offset_bottom = 4.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CompressedTexture2D_ue4yn")
+texture = ExtResource("3_swxrv")
 metadata/_edit_lock_ = true
 
 [node name="OptionsButton" type="Button" parent="NinePatchRect/NinePatchRect2/VBoxContainer" unique_id=477157896]
@@ -213,7 +204,7 @@ offset_right = 4.5
 offset_bottom = 4.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CompressedTexture2D_ue4yn")
+texture = ExtResource("3_swxrv")
 metadata/_edit_lock_ = true
 
 [node name="ExitButton" type="Button" parent="NinePatchRect/NinePatchRect2/VBoxContainer" unique_id=1907951917]
@@ -240,10 +231,34 @@ offset_right = 4.5
 offset_bottom = 4.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CompressedTexture2D_ue4yn")
+texture = ExtResource("3_swxrv")
 metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=648462669]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2050125210]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.9258776, 0.34336796, 0.6590816, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1533079888]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "ANDROID TEST"
 
 [node name="PlayerSpawn" parent="." unique_id=770817307 instance=ExtResource("1_aoyix")]
 position = Vector2(-832, 592)

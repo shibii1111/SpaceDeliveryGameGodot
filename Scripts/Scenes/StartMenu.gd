@@ -4,7 +4,8 @@ extends Control
 @export var start_button: Button
 
 
-#func _ready() -> void:
+func _ready() -> void:
+	print("MAIN SCENE READY")
 	#start_button.pressed.connect(_on_start_button_pressed)
 
 func _on_exit_button_pressed() -> void:
