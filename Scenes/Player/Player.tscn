@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://qi7rw0uf7gma" path="res://Scripts/Player/PlayerMovement.gd" id="1_s0eop"]
 [ext_resource type="Texture2D" uid="uid://t2jpn6k23p1y" path="res://Assets/Player/Spaceship_01.png" id="2_ft8w5"]
 [ext_resource type="PackedScene" uid="uid://b4v1cem220w0t" path="res://Scenes/Projectiles/NormalProjectile.tscn" id="2_ude3g"]
+[ext_resource type="PackedScene" uid="uid://dg3mbls6hryen" path="res://Scenes/Player/MobileControl.tscn" id="5_jmcll"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l3ax4"]
 radius = 76.79192
@@ -35,3 +36,5 @@ drag_vertical_enabled = true
 
 [node name="Muzzle" type="Marker2D" parent="Body" unique_id=493561533]
 position = Vector2(62, 0)
+
+[node name="MobileControl" parent="." unique_id=374078596 instance=ExtResource("5_jmcll")]

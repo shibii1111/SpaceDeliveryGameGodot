@@ -6,6 +6,7 @@ extends Node2D
 
 @onready var muzzle: Marker2D = $Body/Muzzle
 @onready var body: CharacterBody2D = $Body
+@onready var mobile_control := $MobileControl
 
 var _cooldown_left: float = 0.0
 var _activate_projectiles: int = 0
@@ -20,10 +21,8 @@ func _process(delta: float) -> void:
 		_try_shoot()
 	
 func _is_fire_pressed() -> bool:
-	if use_external_input:
-		return external_fire_pressed	
-		
-	return Input.is_action_pressed("fire")
+	var right_stick = mobile_control.get_node("RightStick")
+	return right_stick.input_vector != Vector2.ZERO
 	
 func _try_shoot() -> void:
 	if _cooldown_left > 0.0:

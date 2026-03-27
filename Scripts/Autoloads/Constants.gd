@@ -8,6 +8,7 @@ extends Node
 class Scenes:
 	const PLAYER: PackedScene = preload("uid://dkqg1dfl6ybdm")
 	const LOADING_SCREEN: PackedScene = preload("uid://cqx25emxcu721")
+	const MOBILE_TWINSTICKS: PackedScene = preload("uid://dg3mbls6hryen")
 
 class Projectiles:
 	const NORMAL: PackedScene = preload("uid://b4v1cem220w0t")
