@@ -2,6 +2,7 @@ extends Node
 
 signal progress_changed(progress: float)
 signal load_finished
+signal mobile_ui_should_show
 
 var loading_screen: PackedScene = Constants.Scenes.LOADING_SCREEN
 var loaded_resource: PackedScene
@@ -19,6 +20,10 @@ func load_scene(_scene_path: String) -> void:
 
 	var new_load_screen = loading_screen.instantiate()
 	add_child(new_load_screen)
+	
+	var mobile_control := get_tree().get_first_node_in_group("MobileControl") as CanvasLayer
+	if mobile_control != null:
+		mobile_control.visible = false
 
 	progress_changed.connect(new_load_screen._on_progress_changed)
 	load_finished.connect(new_load_screen._on_load_finished)
@@ -51,6 +56,8 @@ func _process(_delta: float) -> void:
 			
 			_refresh_player_spawn()
 
+			await get_tree().process_frame
+			mobile_ui_should_show.emit()
 			load_finished.emit()
 
 func _swap_into_level_container_and_return(packed: PackedScene) -> Node:

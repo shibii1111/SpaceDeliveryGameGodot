@@ -38,3 +38,4 @@ drag_vertical_enabled = true
 position = Vector2(62, 0)
 
 [node name="MobileControl" parent="." unique_id=374078596 instance=ExtResource("5_jmcll")]
+visible = false

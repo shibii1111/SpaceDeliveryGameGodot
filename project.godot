@@ -46,6 +46,7 @@ Enemies=""
 SpawnPoints=""
 LevelContainer=""
 Camera=""
+MobileControl=""
 
 [input]
 

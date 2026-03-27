@@ -5,20 +5,16 @@
 [ext_resource type="Texture2D" uid="uid://dqvall48qliyk" path="res://Assets/UI/Kenney/kenney_ui-pack-space-expansion/PNG/Extra/Default/panel_glass.png" id="2_sbd8g"]
 [ext_resource type="Texture2D" uid="uid://c0a2mo6jo8o4o" path="res://Assets/UI/Kenney/kenney_ui-pack-space-expansion/PNG/Extra/Default/panel_square.png" id="3_swxrv"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gawjd"]
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_swxrv"]
-texture = SubResource("CompressedTexture2D_gawjd")
+texture = ExtResource("2_sbd8g")
 texture_margin_left = 6.0
 texture_margin_top = 6.0
 texture_margin_right = 6.0
 texture_margin_bottom = 6.0
 region_rect = Rect2(0, 0, 64, 64)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jejci"]
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sbd8g"]
-texture = SubResource("CompressedTexture2D_jejci")
+texture = ExtResource("3_swxrv")
 texture_margin_left = 6.0
 texture_margin_top = 6.0
 texture_margin_right = 6.0
@@ -27,7 +23,7 @@ region_rect = Rect2(0, 0, 64, 64)
 modulate_color = Color(0.16045877, 0.13855183, 0.015254909, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jejci"]
-texture = SubResource("CompressedTexture2D_gawjd")
+texture = ExtResource("3_swxrv")
 texture_margin_left = 6.0
 texture_margin_top = 6.0
 texture_margin_right = 6.0
@@ -233,32 +229,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_swxrv")
 metadata/_edit_lock_ = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=648462669]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=2050125210]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.9258776, 0.34336796, 0.6590816, 1)
-
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=1533079888]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "ANDROID TEST"
 
 [node name="PlayerSpawn" parent="." unique_id=770817307 instance=ExtResource("1_aoyix")]
 position = Vector2(-832, 592)
